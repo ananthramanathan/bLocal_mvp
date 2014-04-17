@@ -9,4 +9,22 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-BLocalMvp::Application.config.secret_key_base = '68d690f3bf8b397f6dc6743300597edec88e3850353c2fa24637942b5dac07e28c789a2d3567d0a52b268eaecafd17fdbd69fd8e7da409899efd399f0c90c7a5'
+
+# BLocalMvp::Application.config.secret_key_base = '68d690f3bf8b397f6dc6743300597edec88e3850353c2fa24637942b5dac07e28c789a2d3567d0a52b268eaecafd17fdbd69fd8e7da409899efd399f0c90c7a5'
+
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+BLocalMvp::Application.config.secret_key_base = secure_token
