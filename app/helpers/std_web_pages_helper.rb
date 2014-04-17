@@ -1,0 +1,2 @@
+module StdWebPagesHelper
+end

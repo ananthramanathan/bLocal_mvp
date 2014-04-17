@@ -1,4 +1,21 @@
 BLocalMvp::Application.routes.draw do
+  # get "std_web_pages/home"
+  # get "std_web_pages/about"
+  # get "std_web_pages/myplaces"
+  # get "std_web_pages/ask"
+  # get "std_web_pages/addplace"
+  
+  root 'std_web_pages#home'
+  get '/addplace' => 'std_web_pages#addplace'
+  get '/about' => 'std_web_pages#about'
+  get '/ask' => 'std_web_pages#ask'
+  get '/myplaces' => 'std_web_pages#myplaces'
+
+  get "std_web_pages/carousel"
+  get '/facebook_template' => 'std_web_pages#facebook_template'
+  # get '/signup' => 'users#new'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

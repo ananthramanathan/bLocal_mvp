@@ -1,0 +1,47 @@
+<% provide(:title, 'Home') %>
+<div class="jumbotron">
+	<h1>Welcome to the bLocal MVP</h1>
+	<h2>Build your personal guidebook to your city!</h2>
+	<%= link_to "Sign up now!", '#', class: "btn btn-large btn-primary" %>
+</div>
+
+<div class='container'>
+	<div class='row'>
+    <div class='col-md-4'></div>
+    <div class='col-md-4'></div>
+	<div class='col-md-offset-4'>
+	   <div class="input-group">
+	     <input type="text" class="form-control" placeholder="Search">
+	     <span class="input-group-btn">
+	       <button class="btn btn-default" type="submit">Search</button>
+	     </span>
+	   </div><!-- /input-group -->
+	</div><!-- /.col-lg-6 -->
+	</div><!-- /.row -->
+	<br>
+
+	<div class='row'>
+		<div class='col-md-4'>
+			<h3>View Recommendations</h3>
+			<p>This app shows you recommendations to bars and restaurants provided by your friends and family</p>
+			<br>
+			<br>
+			<%= link_to 'View Reco', '#', class: "btn btn-success btn-lg" %>
+		</div>
+		<div class='col-md-4'>
+			<h3>Add Recommendations</h3>
+			<p>Provide recommendations of your favourite bars and restaurants in London to your friends and family</p>
+			<br>
+			<br>
+			<%= link_to 'Add Reco', '#', class: "btn btn-primary btn-lg" %>
+		</div>
+		<div class='col-md-4'>
+			<h3>Ask Recommendations</h3>
+			<p>Ask your friends and family to provide you recommendations of their favorite bars and restaurants</p>
+			<br>
+			<br>
+			<p><a class="btn btn-warning btn-lg" role="button">Ask Reco</a></p>
+		</div>
+	</div>
+
+</div>
