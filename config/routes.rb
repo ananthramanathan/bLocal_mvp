@@ -1,4 +1,5 @@
 BLocalMvp::Application.routes.draw do
+  get "users/new"
   # get "std_web_pages/home"
   # get "std_web_pages/about"
   # get "std_web_pages/myplaces"
@@ -13,7 +14,7 @@ BLocalMvp::Application.routes.draw do
 
   get "std_web_pages/carousel"
   get '/facebook_template' => 'std_web_pages#facebook_template'
-  # get '/signup' => 'users#new'
+  get '/signup' => 'users#new'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
